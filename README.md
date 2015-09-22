@@ -1,4 +1,4 @@
-# Ghost Game
+# Escape from ghost
 
 Inspired and forked from LinkOfDeath (https://github.com/DVLP/LinkOfDeath)
 
