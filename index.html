@@ -53,7 +53,7 @@
         clientY = e.clientY + document.body.scrollTop;
     });
 
-    setInterval(function () {
+    function interation() {
         currX += (clientX - currX) / (2 * difficulty);
         currY += (clientY - currY) / (2 * difficulty);
         you.style.left = clientX + 'px';
@@ -63,7 +63,7 @@
         link.style.top = currY + 'px';
         score++;
         scoreEl.textContent = score;
-        difficulty -= 0.05;
+        difficulty -= 0.13;
     
         if(currX > window.innerWidth){
             currX = window.innerWidth;
@@ -76,8 +76,11 @@
         }else if(currY > window.innerHeight){
             currY = window.innerHeight;
         }
-    
-    }, 10);
+
+        window.requestAnimationFrame(interation);
+    }
+
+    window.requestAnimationFrame(interation);
 </script>
 <script src="javascripts/scale.fix.js"></script>
 <script type="text/javascript">
